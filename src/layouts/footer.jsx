@@ -4,7 +4,7 @@ import { CiInstagram } from "react-icons/ci";
 
 export const Footer = () => {
     return (
-<div className="flex flex-col  lg:gap-32 pl-2 p-7">
+<div className="flex flex-col  lg:gap-32 pl-2 p-7 bg-[#f0f0f0]">
   <div className="flex flex-col  lg:flex-row lg:justify-around">
     <div className="flex flex-col gap-4 lg:gap-7">
       <p className="font-bold">GET IN TOUCH</p>

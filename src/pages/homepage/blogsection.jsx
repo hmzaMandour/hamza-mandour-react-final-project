@@ -7,8 +7,8 @@ export const Blogsection = () => {
             <p className='text-[35px] font-semibold text-center'>OUR BLOG</p>
             <div className='bgdiv flex items-center gap-6'>
                 <div className='flex flex-col justify-center gap-5'>
-                    <div>
-                        <img src={images.blog1} className='blog-img'  />
+                    <div className='zoom-container'>
+                        <img src={images.blog1} className='blog-img zoom-hover'  />
                     </div>
                     <div className='flex flex-col gap-4'>
                         <p className='text-[18px] font-semibold'>Black Friday Guide: Best Sales & Discount Codes</p>
@@ -17,8 +17,8 @@ export const Blogsection = () => {
                     </div>
                 </div>
                 <div className='flex flex-col justify-center gap-5'>
-                    <div>
-                        <img src={images.blog2} className='blog-img'/>
+                    <div className='zoom-container'>
+                        <img src={images.blog2} className='blog-img zoom-hover'/>
                     </div>
                     <div className='flex flex-col gap-4'>
                         <p className='text-[18px] font-semibold'>The White Sneakers Nearly Every Fashion Girl Owns</p>
@@ -27,8 +27,8 @@ export const Blogsection = () => {
                     </div>
                 </div>
                 <div className='flex flex-col justify-center gap-5'>
-                    <div>
-                        <img src={images.blog3} className='blog-img' />
+                    <div className='zoom-container'>
+                        <img src={images.blog3} className='blog-img zoom-hover' />
                     </div>
                     <div className='flex flex-col gap-4'>
                         <p className='text-[19px] font-semibold'>New York SS 2018 Street Style: By Annina Mislin</p>

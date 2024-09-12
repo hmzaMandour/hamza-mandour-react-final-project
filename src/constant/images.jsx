@@ -31,4 +31,12 @@ export default{
     paypal : require("../assets/images/paypal.png.webp"),
     shop : require("../assets/images/shop-item-09.jpg"),
     visa : require("../assets/images/visa.png.webp"),
+    product1 : require("../assets/images/product1.webp"),
+    product2 : require("../assets/images/product2.webp"),
+    product3: require("../assets/images/product3.webp"),
+    product4: require("../assets/images/product4.webp"),
+    product5: require("../assets/images/product5.webp"),
+    product6: require("../assets/images/product6.webp"),
+    product7: require("../assets/images/product7.webp"),
+     
 }
