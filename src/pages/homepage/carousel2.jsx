@@ -21,7 +21,7 @@ export const Carousel2 = () => {
         className="mySwiper"
       >
             <SwiperSlide className=' '>
-                        <div className='flex items-center justify-center gap-10 '>
+                        <div className='flex bgdiv items-center justify-center gap-10 '>
                           
                             <div >
                                  <img src={images.itemcart1} className='' alt="" />
@@ -46,7 +46,7 @@ export const Carousel2 = () => {
                         </div>  
             </SwiperSlide>
             <SwiperSlide className=''>
-                 <div className='flex gap-3 justify-center items-center '>
+                 <div className='flex gap-3 bgdiv justify-center items-center '>
                              <div >
                                  <img src={images.item4} className='' alt="" />
                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, veritatis.</p>

@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 @import 'flowbite';
+
+.zoom-container {
+    overflow: hidden; 
+}
+
+.zoom-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-hover:hover {
+    transform: scale(1.1); 
+}
+
+.blog-img {
+    width: 400px; 
+    height: 350px; 
+}
+.bgdiv{
+    padding-inline: 4vw;
+}
+
