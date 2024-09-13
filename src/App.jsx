@@ -9,6 +9,7 @@ import { Carousel2 } from "./pages/homepage/carousel2";
 import { Blogsection } from "./pages/homepage/blogsection";
 import { Homepage } from "./pages/homepage/homepage";
 import { About } from "./pages/about/about";
+import { Aboutpage } from "./pages/about/aboutpage";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/carousel2" element={<Carousel2 />} />
         <Route path="/blogsection" element={<Blogsection />} />
         <Route path="/home" element={< Homepage/>} />
-        <Route path="/" element={< About/>} />
+        <Route path="/about" element={< About />} />
+        <Route path="/" element={<Aboutpage  />} />
     </Routes>
     </>
   );
