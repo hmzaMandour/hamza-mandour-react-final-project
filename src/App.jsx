@@ -10,6 +10,8 @@ import { Blogsection } from "./pages/homepage/blogsection";
 import { Homepage } from "./pages/homepage/homepage";
 import { About } from "./pages/about/about";
 import { Aboutpage } from "./pages/about/aboutpage";
+import { Contact } from "./pages/contact/contact";
+import { Contactpage } from "./pages/contact/contactpage";
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
         <Route path="/blogsection" element={<Blogsection />} />
         <Route path="/home" element={< Homepage/>} />
         <Route path="/about" element={< About />} />
-        <Route path="/" element={<Aboutpage  />} />
+        <Route path="/aboutpage" element={<Aboutpage  />} />
+        <Route path="/contact" element={<Contact  />} />
+        <Route path="/" element={<Contactpage  />} />
     </Routes>
     </>
   );
