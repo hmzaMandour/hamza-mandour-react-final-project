@@ -3,7 +3,7 @@ import images from '../../constant/images';
 
 export const Contact = () => {
     return (
-        <div className=''>
+        <div className='pt-[14vh]'>
             <div
                 className='flex justify-center items-center relative'
                 style={{

@@ -14,9 +14,9 @@ export const Carousel1 = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper h-[80vh]"
+        className="mySwiper h-[80vh] "
       >
-       <SwiperSlide className='relative '>
+       <SwiperSlide className='relative pt-[14vh]'>
                 <img src={images.carousel1} className="h-[100%] object-cover"   />
                 <div className='absolute top-[11rem] flex flex-col items-center gap-5 left-[28rem] text-center text-3xl text-white'>
                     <h5 className='text-xl'>women collection 2018</h5>

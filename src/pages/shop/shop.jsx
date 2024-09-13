@@ -14,7 +14,7 @@ export const Shop = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     const navigate=useNavigate()
     return (
-        <div className='flex flex-col gap-10 pb-[8vh]'>
+        <div className='flex flex-col gap-10 pb-[8vh] pt-[14vh]'>
             <div
                 className='flex justify-center items-center relative'
                 style={{

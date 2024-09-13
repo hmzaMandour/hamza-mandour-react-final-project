@@ -3,7 +3,7 @@ import images from '../../constant/images';
 
 export const About = () => {
     return (
-        <div className='flex flex-col gap-[8vh] pb-[8vh]'>
+        <div className='flex flex-col gap-[8vh] pb-[8vh] pt-[14vh]'>
             <div
                 className='flex justify-center items-center relative'
                 style={{
