@@ -12,12 +12,14 @@ import { About } from "./pages/about/about";
 import { Aboutpage } from "./pages/about/aboutpage";
 import { Contact } from "./pages/contact/contact";
 import { Contactpage } from "./pages/contact/contactpage";
+import { Shop } from "./pages/shop/shop";
+import { Shoppage } from "./pages/shop/shoppage";
 
 function App() {
   return (
     <>
     <Routes>
-      <Route path="/nav" element={<Navbar />} />
+        <Route path="/nav" element={<Navbar />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/carousel1" element={<Carousel1 />} />
         <Route path="/section2" element={<Section2 />} />
@@ -27,7 +29,9 @@ function App() {
         <Route path="/about" element={< About />} />
         <Route path="/aboutpage" element={<Aboutpage  />} />
         <Route path="/contact" element={<Contact  />} />
-        <Route path="/" element={<Contactpage  />} />
+        <Route path="/contactpage" element={<Contactpage  />} />
+        <Route path="/shop" element={<Shop  />} />
+        <Route path="/" element={<Shoppage  />} />
     </Routes>
     </>
   );
