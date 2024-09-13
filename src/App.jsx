@@ -17,6 +17,7 @@ import { Shoppage } from "./pages/shop/shoppage";
 import { Section3 } from "./pages/homepage/section3";
 import { Description } from "./pages/shop/description";
 import { Signin } from "./pages/signin/signin";
+import { Signup } from "./pages/signin/signup";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         <Route path="/shoppage" element={<Shoppage  />} />
         <Route path="/desc/:id" element={<Description  />} />
         <Route path="/section3" element={<Section3  />} />
-        <Route path="/" element={<Signin  />} />
+        <Route path="/signin" element={<Signin  />} />
+        <Route path="/" element={<Signup  />} />
     </Routes>
     </>
   );
