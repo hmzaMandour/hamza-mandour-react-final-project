@@ -6,6 +6,7 @@ import { Carousel2 } from './carousel2';
 import { Blogsection } from './blogsection';
 import { Lastsectionimhome } from './lastsectionimhome';
 import { Footer } from '../../layouts/footer';
+import { Section3 } from './section3';
 
 export const Homepage = () => {
     return (
@@ -16,6 +17,7 @@ export const Homepage = () => {
            </div>
             <Section2 />
             <Carousel2 />
+            <Section3 />
             <Blogsection />
             <Lastsectionimhome />
             <Footer />

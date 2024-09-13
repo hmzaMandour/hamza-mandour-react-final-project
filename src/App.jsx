@@ -14,6 +14,7 @@ import { Contact } from "./pages/contact/contact";
 import { Contactpage } from "./pages/contact/contactpage";
 import { Shop } from "./pages/shop/shop";
 import { Shoppage } from "./pages/shop/shoppage";
+import { Section3 } from "./pages/homepage/section3";
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
         <Route path="/contact" element={<Contact  />} />
         <Route path="/contactpage" element={<Contactpage  />} />
         <Route path="/shop" element={<Shop  />} />
-        <Route path="/" element={<Shoppage  />} />
+        <Route path="/shoppage" element={<Shoppage  />} />
+        <Route path="/" element={<Section3  />} />
     </Routes>
     </>
   );
