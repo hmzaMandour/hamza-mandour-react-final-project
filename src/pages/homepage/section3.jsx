@@ -20,7 +20,7 @@ export const Section3 = () => {
 
 
 
-            <div className='w-[50%] flex flex-col p-5 bg-white  items-center  h-[70vh]'>
+            <div className='w-[50%] flex flex-col p-5 bg-white gap-1  items-center  h-[70vh]'>
                 <img className='w-[100%] h-[80%] ' src={images[randomElement.image]} alt="" />
                 <div>
                     <h1 className='text-black text-center '>{randomElement.title}</h1>

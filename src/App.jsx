@@ -15,6 +15,7 @@ import { Contactpage } from "./pages/contact/contactpage";
 import { Shop } from "./pages/shop/shop";
 import { Shoppage } from "./pages/shop/shoppage";
 import { Section3 } from "./pages/homepage/section3";
+import { Description } from "./pages/shop/description";
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
         <Route path="/contactpage" element={<Contactpage  />} />
         <Route path="/shop" element={<Shop  />} />
         <Route path="/shoppage" element={<Shoppage  />} />
-        <Route path="/" element={<Section3  />} />
+        <Route path="/desc/:id" element={<Description  />} />
+        <Route path="/section3" element={<Section3  />} />
     </Routes>
     </>
   );

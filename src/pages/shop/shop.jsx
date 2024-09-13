@@ -149,7 +149,7 @@ export const Shop = () => {
                                 className="w-full h-auto object-cover"
                             />
                             </div>
-                            <h1 onClick={()=>{navigate(`/shop/${e.id}`)}} className="pl-3 text-xl text-gray-400 pt-3 hover:text-[#f5bdb5] cursor-pointer">
+                            <h1 onClick={()=>{navigate(`/desc/${e.id}`)}} className="pl-3 text-xl text-gray-400 pt-3 hover:text-[#f5bdb5] cursor-pointer">
                             {e.title}
                             </h1>
                             <h1 className="pl-3 text-xl text-gray-400">{e.price}</h1>
