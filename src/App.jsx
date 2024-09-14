@@ -31,7 +31,7 @@ function App() {
               <Route path="/section2" element={<Section2 />} />
               <Route path="/carousel2" element={<Carousel2 />} />
               <Route path="/blogsection" element={<Blogsection />} />
-              <Route path="/home" element={< Homepage/>} />
+              <Route path="/" element={< Homepage/>} />
               <Route path="/about" element={< About />} />
               <Route path="/aboutpage" element={<Aboutpage  />} />
               <Route path="/contact" element={<Contact  />} />
@@ -41,7 +41,7 @@ function App() {
               <Route path="/desc/:id" element={<Description  />} />
               <Route path="/section3" element={<Section3  />} />
               <Route path="/signin" element={<Signin  />} />
-              <Route path="/" element={<Signup  />} />
+              <Route path="/signup" element={<Signup  />} />
             </Routes>
        </Provider>
       

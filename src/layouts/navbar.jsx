@@ -34,7 +34,7 @@ export const Navbar = () => {
                 isMenuOpen ? 'flex' : 'hidden'
               } lg:flex flex-col lg:flex-row items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 absolute lg:static top-16 left-0 w-full lg:bg-transparent p-4 lg:p-0`}
             >
-              <li onClick={() => { navigate(`/home`) }} className="text-gray-700 text-[14px] sm:text-[16px] lg:text-[17px] cursor-pointer hover:text-[#e65540]">Home</li>
+              <li onClick={() => { navigate(`/`) }} className="text-gray-700 text-[14px] sm:text-[16px] lg:text-[17px] cursor-pointer hover:text-[#e65540]">Home</li>
               <li onClick={() => { navigate(`/shoppage`) }} className="text-gray-700 text-[14px] sm:text-[16px] lg:text-[17px] cursor-pointer hover:text-[#e65540]">Shop</li>
               <li className="text-gray-700 text-[14px] sm:text-[16px] lg:text-[17px] cursor-pointer hover:text-[#e65540]">Sale</li>
               <li className="text-gray-700 text-[14px] sm:text-[16px] lg:text-[17px] cursor-pointer hover:text-[#e65540]">Features</li>
@@ -45,7 +45,7 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-4 sm:gap-5 md:gap-6">
-            <FaRegUserCircle className="text-[20px] sm:text-[25px] lg:text-[30px] text-gray-600" />
+            <FaRegUserCircle onClick={() => { navigate(`/signin`) }} className=" cursor-pointer text-[20px] sm:text-[25px] lg:text-[30px] text-gray-600" />
             <IoBagOutline className="text-[20px] sm:text-[25px] lg:text-[30px] text-gray-600" />
           </div>
         </nav>
