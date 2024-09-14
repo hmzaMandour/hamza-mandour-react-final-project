@@ -18,29 +18,33 @@ import { Section3 } from "./pages/homepage/section3";
 import { Description } from "./pages/shop/description";
 import { Signin } from "./pages/signin/signin";
 import { Signup } from "./pages/signin/signup";
+import { Provider } from "./context";
 
 function App() {
   return (
     <>
-    <Routes>
-        <Route path="/nav" element={<Navbar />} />
-        <Route path="/footer" element={<Footer />} />
-        <Route path="/carousel1" element={<Carousel1 />} />
-        <Route path="/section2" element={<Section2 />} />
-        <Route path="/carousel2" element={<Carousel2 />} />
-        <Route path="/blogsection" element={<Blogsection />} />
-        <Route path="/home" element={< Homepage/>} />
-        <Route path="/about" element={< About />} />
-        <Route path="/aboutpage" element={<Aboutpage  />} />
-        <Route path="/contact" element={<Contact  />} />
-        <Route path="/contactpage" element={<Contactpage  />} />
-        <Route path="/shop" element={<Shop  />} />
-        <Route path="/shoppage" element={<Shoppage  />} />
-        <Route path="/desc/:id" element={<Description  />} />
-        <Route path="/section3" element={<Section3  />} />
-        <Route path="/signin" element={<Signin  />} />
-        <Route path="/" element={<Signup  />} />
-    </Routes>
+       <Provider >
+           <Routes>
+              <Route path="/nav" element={<Navbar />} />
+              <Route path="/footer" element={<Footer />} />
+              <Route path="/carousel1" element={<Carousel1 />} />
+              <Route path="/section2" element={<Section2 />} />
+              <Route path="/carousel2" element={<Carousel2 />} />
+              <Route path="/blogsection" element={<Blogsection />} />
+              <Route path="/home" element={< Homepage/>} />
+              <Route path="/about" element={< About />} />
+              <Route path="/aboutpage" element={<Aboutpage  />} />
+              <Route path="/contact" element={<Contact  />} />
+              <Route path="/contactpage" element={<Contactpage  />} />
+              <Route path="/shop" element={<Shop  />} />
+              <Route path="/shoppage" element={<Shoppage  />} />
+              <Route path="/desc/:id" element={<Description  />} />
+              <Route path="/section3" element={<Section3  />} />
+              <Route path="/signin" element={<Signin  />} />
+              <Route path="/" element={<Signup  />} />
+            </Routes>
+       </Provider>
+      
     </>
   );
 }
