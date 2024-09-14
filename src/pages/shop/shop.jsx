@@ -1,18 +1,56 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import images from '../../constant/images';
 import { useNavigate } from 'react-router-dom';
 import data from "../../json/data.json";
 
 export const Shop = () => {
+    const [selectedCheckboxTypes, setSelectedCheckboxTypes] = useState([]);
+    const [filteredData, setFilteredData] = useState(data); 
+    const [priceRange, setPriceRange] = useState([0, Infinity]); 
+
+    const handleCheckboxChange = (e) => {
+        const { value, checked } = e.target;
+        if (checked) {
+            setSelectedCheckboxTypes([...selectedCheckboxTypes, value]);
+        } else {
+            setSelectedCheckboxTypes(selectedCheckboxTypes.filter((type) => type !== value));
+        }
+    };
+
+    const filterPrice = (min, max) => {
+        setPriceRange([min, max]);
+    };
+
+    const applyFilters = () => {
+        let filtered = data;
+
+        if (selectedCheckboxTypes.length > 0) {
+            filtered = filtered.filter(product => selectedCheckboxTypes.includes(product.color));
+        }
+
+        filtered = filtered.filter(product => {
+            const price = parseFloat(product.price.replace('$', ''));
+            return price >= priceRange[0] && price <= priceRange[1];
+        });
+
+        setFilteredData(filtered);
+    };
+
+    useEffect(() => {
+        applyFilters();
+    }, [selectedCheckboxTypes, priceRange]);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 6; 
+    const productsPerPage = 6;
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
-    const totalPages = Math.ceil(data.length / productsPerPage);
+    const currentProducts = filteredData.slice(indexOfFirstProduct, indexOfLastProduct);
+    const totalPages = Math.ceil(filteredData.length / productsPerPage);
+
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    const navigate=useNavigate()
+
+     const navigate=useNavigate()
+
     return (
         <div className='flex flex-col gap-10 pb-[8vh] pt-[14vh]'>
             <div
@@ -53,50 +91,50 @@ export const Shop = () => {
                         <p className='text-[20px] font-bold'>color</p>
                         <div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="black" />
+                                 <input value="black"   onChange={handleCheckboxChange} type="checkbox" name="" id="black" />
                                   <label htmlFor="black" className='text-gray-500 hover:text-[#e65540]'>Black</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="gray" />
+                                 <input value="gray"   onChange={handleCheckboxChange} type="checkbox" name="" id="gray" />
                                   <label htmlFor="gary" className='text-gray-500 hover:text-[#e65540]'>Gray</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="red" />
+                                 <input value="red"   onChange={handleCheckboxChange} type="checkbox" name="" id="red" />
                                   <label htmlFor="red" className='text-gray-500 hover:text-[#e65540]'>Red</label>
                             </div>
                         </div>
                     </div>
                     <div className='flex flex-col gap-[2vh]'>
-                        <p className='text-[20px] font-bold'>Price</p>
+                        <p className='text-[30px] font-bold'>Price</p>
                         <div>
-                            <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="black" />
-                                  <label htmlFor="black" className='text-gray-500 hover:text-[#e65540]'>0-20</label>
-                            </div>
-                            <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="gray" />
-                                 <label htmlFor="gary" className='text-gray-500 hover:text-[#e65540]'>20-50</label>
-                            </div>
-                        </div>
+                <div className='flex items-center gap-2'>
+                    <input type="checkbox" onChange={() => filterPrice(0, 20)} />
+                    <label className='text-gray-500 hover:text-[#e65540]'>0-20</label>
+                </div>
+                <div className='flex items-center gap-2'>
+                    <input type="checkbox" onChange={() => filterPrice(20, 50)} />
+                    <label className='text-gray-500 hover:text-[#e65540]'>20-50</label>
+                </div>
+            </div>
                     </div>
                     <div className='flex flex-col gap-[2vh]'>
                         <p className='text-[20px] font-bold'>Size</p>
                         <div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="black" />
-                                  <label htmlFor="black" className='text-gray-500 hover:text-[#e65540]'>L</label>
+                                 <input type="checkbox" name=""  />
+                                  <label  className='text-gray-500 hover:text-[#e65540]'>L</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="gray" />
-                                  <label htmlFor="gary" className='text-gray-500 hover:text-[#e65540]'>M</label>
+                                 <input type="checkbox" name=""  />
+                                  <label  className='text-gray-500 hover:text-[#e65540]'>M</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="red" />
-                                  <label htmlFor="red" className='text-gray-500 hover:text-[#e65540]'>S</label>
+                                 <input type="checkbox" name=""  />
+                                  <label  className='text-gray-500 hover:text-[#e65540]'>S</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name="" id="red" />
-                                  <label htmlFor="red" className='text-gray-500 hover:text-[#e65540]'>XL</label>
+                                 <input type="checkbox" name=""  />
+                                  <label  className='text-gray-500 hover:text-[#e65540]'>XL</label>
                             </div>
                         </div>
                     </div>
