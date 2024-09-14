@@ -49,7 +49,7 @@ export const Shop = () => {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-     const navigate=useNavigate()
+    const navigate = useNavigate();
 
     return (
         <div className='flex flex-col gap-10 pb-[8vh] pt-[14vh]'>
@@ -63,20 +63,17 @@ export const Shop = () => {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-                <div className='absolute inset-0 bg-black opacity-50 ' ></div>
+                <div className='absolute inset-0 bg-black opacity-50 '></div>
 
                 <div className='flex flex-col'>
                     <p className='text-[50px] text-white font-bold text-center relative'>
-                    BEST SELLER
+                        BEST SELLER
                     </p>
                     <p className='text-[18px] text-white text-center relative'>Best Seller Collection 2018</p>
                 </div>
             </div>
 
-
-
-
-            <div className='flex gap-10 bgdiv'>
+            <div className='flex flex-col md:flex-row gap-10 bgdiv'>
                 <div className='flex flex-col gap-[6vh]'>
                     <div className='flex flex-col gap-[2vh]'>
                         <p className='text-[20px] font-bold'>Categories</p>
@@ -87,106 +84,105 @@ export const Shop = () => {
                             <p className='text-gray-500 hover:text-[#e65540]'>Women (8 items)</p>
                         </div>
                     </div>
+
                     <div className='flex flex-col gap-[2vh]'>
-                        <p className='text-[20px] font-bold'>color</p>
+                        <p className='text-[20px] font-bold'>Color</p>
                         <div>
                             <div className='flex gap-2 items-center'>
-                                 <input value="black"   onChange={handleCheckboxChange} type="checkbox" name="" id="black" />
-                                  <label htmlFor="black" className='text-gray-500 hover:text-[#e65540]'>Black</label>
+                                <input value="black" onChange={handleCheckboxChange} type="checkbox" id="black" />
+                                <label htmlFor="black" className='text-gray-500 hover:text-[#e65540]'>Black</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input value="gray"   onChange={handleCheckboxChange} type="checkbox" name="" id="gray" />
-                                  <label htmlFor="gary" className='text-gray-500 hover:text-[#e65540]'>Gray</label>
+                                <input value="gray" onChange={handleCheckboxChange} type="checkbox" id="gray" />
+                                <label htmlFor="gray" className='text-gray-500 hover:text-[#e65540]'>Gray</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input value="red"   onChange={handleCheckboxChange} type="checkbox" name="" id="red" />
-                                  <label htmlFor="red" className='text-gray-500 hover:text-[#e65540]'>Red</label>
+                                <input value="red" onChange={handleCheckboxChange} type="checkbox" id="red" />
+                                <label htmlFor="red" className='text-gray-500 hover:text-[#e65540]'>Red</label>
                             </div>
                         </div>
                     </div>
+
                     <div className='flex flex-col gap-[2vh]'>
                         <p className='text-[30px] font-bold'>Price</p>
                         <div>
-                <div className='flex items-center gap-2'>
-                    <input type="checkbox" onChange={() => filterPrice(0, 20)} />
-                    <label className='text-gray-500 hover:text-[#e65540]'>0-20</label>
-                </div>
-                <div className='flex items-center gap-2'>
-                    <input type="checkbox" onChange={() => filterPrice(20, 50)} />
-                    <label className='text-gray-500 hover:text-[#e65540]'>20-50</label>
-                </div>
-            </div>
+                            <div className='flex items-center gap-2'>
+                                <input type="checkbox" onChange={() => filterPrice(0, 20)} />
+                                <label className='text-gray-500 hover:text-[#e65540]'>0-20</label>
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <input type="checkbox" onChange={() => filterPrice(20, 50)} />
+                                <label className='text-gray-500 hover:text-[#e65540]'>20-50</label>
+                            </div>
+                        </div>
                     </div>
+
                     <div className='flex flex-col gap-[2vh]'>
                         <p className='text-[20px] font-bold'>Size</p>
                         <div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name=""  />
-                                  <label  className='text-gray-500 hover:text-[#e65540]'>L</label>
+                                <input type="checkbox" />
+                                <label className='text-gray-500 hover:text-[#e65540]'>L</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name=""  />
-                                  <label  className='text-gray-500 hover:text-[#e65540]'>M</label>
+                                <input type="checkbox" />
+                                <label className='text-gray-500 hover:text-[#e65540]'>M</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name=""  />
-                                  <label  className='text-gray-500 hover:text-[#e65540]'>S</label>
+                                <input type="checkbox" />
+                                <label className='text-gray-500 hover:text-[#e65540]'>S</label>
                             </div>
                             <div className='flex gap-2 items-center'>
-                                 <input type="checkbox" name=""  />
-                                  <label  className='text-gray-500 hover:text-[#e65540]'>XL</label>
+                                <input type="checkbox" />
+                                <label className='text-gray-500 hover:text-[#e65540]'>XL</label>
                             </div>
                         </div>
                     </div>
 
-                    <input type="text" placeholder='Search.....' className='p-3 w-64'/>
-                    
+                    <input type="text" placeholder='Search.....' className='p-3 w-64' />
                 </div>
 
-
-
-
-
                 <div className='flex flex-col gap-9'>
-                    <div className="flex justify-center items-center gap-[17vw] ">
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-5">
                         <div className='flex justify-center gap-3'>
                             <select
-                        className="block p-2.5 w-[14vw] bg-white border border-gray-300 text-gray-900 text-sm rounded-lg"
-                        name="input-sort"
-                        id="input-sort"
-                        >
-                        <option className='text-gray-500' value="manual">Featured</option>
-                        <option className='text-gray-500' value="best-selling">Best Selling</option>
-                        <option className='text-gray-500' value="title-ascending">Alphabetically, A-Z</option>
-                        <option className='text-gray-500' value="title-descending">Alphabetically, Z-A</option>
-                        <option className='text-gray-500' value="price-ascending">Price, low to high</option>
-                        <option className='text-gray-500' value="price-descending">Price, high to low</option>
-                        <option className='text-gray-500' value="created-descending">Date, new to old</option>
-                        <option className='text-gray-500' value="created-ascending">Date, old to new</option>
-                        </select>
-                        <select
-                        id="input-limit"
-                        className="block p-2.5 w-[14vw] bg-white border border-gray-300 text-gray-900 text-sm rounded-lg"
-                        >
-                        <option className='text-gray-500' value="10">10</option>
-                        <option className='text-gray-500' value="20">20</option>
-                        <option className='text-gray-500' value="30">30</option>
-                        <option className='text-gray-500' value="all">All</option>
-                        </select>
+                                className="block p-2.5 w-[14vw] bg-white border border-gray-300 text-gray-900 text-sm rounded-lg"
+                                name="input-sort"
+                                id="input-sort"
+                            >
+                                <option value="manual">Featured</option>
+                                <option value="best-selling">Best Selling</option>
+                                <option value="title-ascending">Alphabetically, A-Z</option>
+                                <option value="title-descending">Alphabetically, Z-A</option>
+                                <option value="price-ascending">Price, low to high</option>
+                                <option value="price-descending">Price, high to low</option>
+                                <option value="created-descending">Date, new to old</option>
+                                <option value="created-ascending">Date, old to new</option>
+                            </select>
+                            <select
+                                id="input-limit"
+                                className="block p-2.5 w-[14vw] bg-white border border-gray-300 text-gray-900 text-sm rounded-lg"
+                            >
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="all">All</option>
+                            </select>
                         </div>
                         <p className='text-gray-500'>Showing 1 to 6 of 8 items</p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                        {currentProducts.map((e, i) => (
-                        <div key={e.id} className="px-4">
-                            <div className="p-2">
-                            <img
-                                src={images[e.image]}
-                                alt={e.title}
-                                className="w-full h-auto object-cover"
-                            />
-                            </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        {currentProducts.map((e) => (
+                            <div key={e.id} className="px-4">
+                                <div className="p-2">
+                                    <img
+                                        src={images[e.image]}
+                                        alt={e.title}
+                                        className="w-full h-auto object-cover"
+                                    />
+                                </div>
+
                             <h1 onClick={()=>{navigate(`/desc/${e.id}`)}} className="pl-3 text-xl text-gray-400 pt-3 hover:text-[#f5bdb5] cursor-pointer">
                             {e.title}
                             </h1>
